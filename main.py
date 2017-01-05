@@ -1,5 +1,5 @@
 #updates 
-from soupclass8 import C_sort
+from soupclass8 import C_sort, w_csv
 
 
 class Main(object):
@@ -22,6 +22,8 @@ class Main(object):
 			for i_2 in range(0, len(self.target_f)):
 				if self.target_f[i_2][unique_id] == target_id:
 					new_csv[i]['Product Id'] = self.target_f[i_2]['Product Id']
+		w_csv(new_csv, 'Updates.csv')
+
 		return new_csv
 
 
